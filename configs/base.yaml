@@ -1,0 +1,18 @@
+project:
+  name: aml-gnn-tesis
+  dataset: elliptic
+  random_seed: 42
+
+paths:
+  raw_data: data/raw/elliptic
+  interim_data: data/interim/elliptic
+  processed_data: data/processed/elliptic
+  models: models
+  reports: reports
+  experiments: experiments
+
+task:
+  objective: illicit_transaction_detection
+  label_positive: illicit
+  label_negative: licit
+  unknown_policy: use_as_unlabeled_context

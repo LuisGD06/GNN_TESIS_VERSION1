@@ -1,0 +1,98 @@
+{
+    "gcn": {
+        "validation": {
+            "accuracy": 0.6974070762549496,
+            "precision": 0.20384615384615384,
+            "recall": 0.8637037037037038,
+            "f1": 0.3298444130127298,
+            "pr_auc": 0.5816930220213319,
+            "roc_auc": 0.882436554530488,
+            "confusion_matrix": [
+                [
+                    4877,
+                    2277
+                ],
+                [
+                    92,
+                    583
+                ]
+            ],
+            "classification_report": "              precision    recall  f1-score   support\n\n           0       0.98      0.68      0.80      7154\n           1       0.20      0.86      0.33       675\n\n    accuracy                           0.70      7829\n   macro avg       0.59      0.77      0.57      7829\nweighted avg       0.91      0.70      0.76      7829\n",
+            "recall_at_50": 0.05333333333333334,
+            "recall_at_100": 0.1111111111111111,
+            "recall_at_500": 0.5318518518518518,
+            "recall_at_1000": 0.725925925925926
+        },
+        "test": {
+            "accuracy": 0.6303585567243525,
+            "precision": 0.09072696050372066,
+            "recall": 0.7769607843137255,
+            "f1": 0.16248077908764735,
+            "pr_auc": 0.25301622543529845,
+            "roc_auc": 0.7996627976460358,
+            "confusion_matrix": [
+                [
+                    5256,
+                    3177
+                ],
+                [
+                    91,
+                    317
+                ]
+            ],
+            "classification_report": "              precision    recall  f1-score   support\n\n           0       0.98      0.62      0.76      8433\n           1       0.09      0.78      0.16       408\n\n    accuracy                           0.63      8841\n   macro avg       0.54      0.70      0.46      8841\nweighted avg       0.94      0.63      0.74      8841\n",
+            "recall_at_50": 0.051470588235294115,
+            "recall_at_100": 0.10049019607843138,
+            "recall_at_500": 0.39705882352941174,
+            "recall_at_1000": 0.4730392156862745
+        }
+    },
+    "graphsage": {
+        "validation": {
+            "accuracy": 0.7055818112147145,
+            "precision": 0.21523410202655485,
+            "recall": 0.9125925925925926,
+            "f1": 0.34831778343228725,
+            "pr_auc": 0.5698339360463012,
+            "roc_auc": 0.9070195384089709,
+            "confusion_matrix": [
+                [
+                    4908,
+                    2246
+                ],
+                [
+                    59,
+                    616
+                ]
+            ],
+            "classification_report": "              precision    recall  f1-score   support\n\n           0       0.99      0.69      0.81      7154\n           1       0.22      0.91      0.35       675\n\n    accuracy                           0.71      7829\n   macro avg       0.60      0.80      0.58      7829\nweighted avg       0.92      0.71      0.77      7829\n",
+            "recall_at_50": 0.0637037037037037,
+            "recall_at_100": 0.11703703703703704,
+            "recall_at_500": 0.4711111111111111,
+            "recall_at_1000": 0.7244444444444444
+        },
+        "test": {
+            "accuracy": 0.6178034159031783,
+            "precision": 0.08975421154377244,
+            "recall": 0.7965686274509803,
+            "f1": 0.16133035492678083,
+            "pr_auc": 0.195461769533762,
+            "roc_auc": 0.7906404112694527,
+            "confusion_matrix": [
+                [
+                    5137,
+                    3296
+                ],
+                [
+                    83,
+                    325
+                ]
+            ],
+            "classification_report": "              precision    recall  f1-score   support\n\n           0       0.98      0.61      0.75      8433\n           1       0.09      0.80      0.16       408\n\n    accuracy                           0.62      8841\n   macro avg       0.54      0.70      0.46      8841\nweighted avg       0.94      0.62      0.73      8841\n",
+            "recall_at_50": 0.041666666666666664,
+            "recall_at_100": 0.06372549019607843,
+            "recall_at_500": 0.3602941176470588,
+            "recall_at_1000": 0.4730392156862745
+        }
+    }
+}

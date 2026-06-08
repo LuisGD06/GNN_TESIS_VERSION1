@@ -1,0 +1,12 @@
+model:
+  name: graphsage
+  hidden_channels: 64
+  num_layers: 2
+  aggregator: mean
+  dropout: 0.5
+  learning_rate: 0.001
+  neighbor_sampling: true
+
+evaluation:
+  split_strategy: temporal
+  use_unknown_as_context: true

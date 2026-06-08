@@ -1,0 +1,16 @@
+model:
+  name: baseline
+  algorithms:
+    - logistic_regression
+    - random_forest
+    - xgboost
+
+evaluation:
+  metrics:
+    - pr_auc
+    - roc_auc
+    - precision
+    - recall
+    - f1
+    - recall_at_k
+  split_strategy: temporal

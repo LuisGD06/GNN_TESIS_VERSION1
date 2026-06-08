@@ -1,0 +1,8 @@
+Instalar PyTorch y PyTorch Geometric con cuidado según la versión de Python, CPU/GPU y sistema operativo.
+
+Recomendación inicial para CPU:
+
+pip install torch torchvision torchaudio
+pip install torch-geometric
+
+Si aparecen errores con torch-scatter, torch-sparse u otras dependencias, revisar la instalación específica de PyTorch Geometric.

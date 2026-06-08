@@ -1,0 +1,38 @@
+{
+    "primary_model": {
+        "name": "XGBoost baseline",
+        "family": "baseline_classic",
+        "selection_metric": "pr_auc",
+        "test_pr_auc": 0.5614390083383461,
+        "test_roc_auc": 0.8733779293764227,
+        "test_precision": 0.5365853658536586,
+        "test_recall": 0.4852941176470588,
+        "test_f1": 0.5096525096525096
+    },
+    "risk_scoring": {
+        "model_used": "baseline_xgboost.pkl",
+        "score_column": "score_illicit",
+        "probability_thresholds": {
+            "high": "score >= 0.80",
+            "medium": "0.50 <= score < 0.80",
+            "low": "score < 0.50"
+        },
+        "priority_percentile_thresholds": {
+            "critical": "percentile >= 99",
+            "high": "percentile >= 95",
+            "medium": "percentile >= 80",
+            "low": "percentile < 80"
+        },
+        "important_note": "Scores generated for unknown nodes are risk prioritization outputs, not supervised evaluation labels."
+    },
+    "data_outputs": {
+        "platform_predictions": "/home/lucho/aml-gnn-tesis/data/processed/elliptic/platform_predictions.parquet",
+        "platform_alerts_top": "/home/lucho/aml-gnn-tesis/data/processed/elliptic/platform_alerts_top.parquet",
+        "subgraph_alerts": "/home/lucho/aml-gnn-tesis/data/processed/elliptic/subgraph_alerts.parquet",
+        "final_model_comparison": "/home/lucho/aml-gnn-tesis/reports/tables/final_model_comparison.csv"
+    },
+    "num_records": {
+        "total_predictions": 203769,
+        "top_alerts": 1000
+    }
+}

@@ -1,0 +1,11 @@
+model:
+  name: gcn
+  hidden_channels: 64
+  num_layers: 2
+  dropout: 0.5
+  learning_rate: 0.001
+  weight_decay: 0.0005
+
+evaluation:
+  split_strategy: temporal
+  use_unknown_as_context: true

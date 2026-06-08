@@ -1,0 +1,12 @@
+dataset:
+  name: elliptic
+  files:
+    features: elliptic_txs_features.csv
+    classes: elliptic_txs_classes.csv
+    edgelist: elliptic_txs_edgelist.csv
+
+graph:
+  directed: true
+  temporal: true
+  node_type: transaction
+  edge_type: payment_flow

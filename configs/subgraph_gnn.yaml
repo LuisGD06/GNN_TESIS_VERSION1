@@ -1,0 +1,24 @@
+subgraphs:
+  extraction_methods:
+    - ego_k_hop
+    - path_based
+    - temporal_window
+  k_values:
+    - 1
+    - 2
+    - 3
+  temporal_windows:
+    - timestep
+  features:
+    structural: true
+    temporal: true
+    degree_based: true
+    motif_based: true
+
+model:
+  name: subgraph_gnn
+  architecture: gin
+  pooling: global_mean_pool
+  hidden_channels: 64
+  num_layers: 2
+  dropout: 0.5

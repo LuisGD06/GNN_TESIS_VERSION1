@@ -1,0 +1,11 @@
+model:
+  name: gat
+  hidden_channels: 64
+  heads: 4
+  num_layers: 2
+  dropout: 0.5
+  learning_rate: 0.001
+
+evaluation:
+  split_strategy: temporal
+  use_unknown_as_context: true

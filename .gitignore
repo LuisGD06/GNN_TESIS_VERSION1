@@ -1,0 +1,85 @@
+# ============================================================
+# Entornos, cachés y archivos temporales
+# ============================================================
+
+.venv/
+env/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+.env
+
+.DS_Store
+Thumbs.db
+
+
+# ============================================================
+# Dataset crudo: NO subir a GitHub
+# ============================================================
+
+data/raw/elliptic/*
+!data/raw/elliptic/.gitkeep
+
+
+# ============================================================
+# Datos intermedios: NO subir a GitHub
+# ============================================================
+
+data/interim/elliptic/*
+!data/interim/elliptic/.gitkeep
+
+
+# ============================================================
+# Datos procesados: ignorar todo salvo artefactos ligeros del dashboard
+# ============================================================
+
+data/processed/elliptic/*
+!data/processed/elliptic/.gitkeep
+!data/processed/elliptic/platform_predictions.parquet
+!data/processed/elliptic/platform_alerts_top.parquet
+!data/processed/elliptic/subgraph_alerts.parquet
+
+
+# ============================================================
+# Modelos entrenados: NO subir a GitHub
+# ============================================================
+
+models/*
+!models/.gitkeep
+
+
+# ============================================================
+# Reportes
+# ============================================================
+
+# Figuras pesadas o generadas automáticamente
+reports/figures/*
+!reports/figures/.gitkeep
+
+# Literatura
+reports/literature/*
+!reports/literature/.gitkeep
+
+# Tablas: ignorar todas salvo las necesarias para el dashboard
+reports/tables/*
+!reports/tables/.gitkeep
+!reports/tables/final_model_comparison.csv
+
+# Métricas: ignorar todas salvo las necesarias para trazabilidad/dashboard
+reports/metrics/*
+!reports/metrics/.gitkeep
+!reports/metrics/platform_metrics_summary.json
+!reports/metrics/platform_export_metadata.json
+!reports/metrics/baseline_metrics.json
+!reports/metrics/gnn_node_metrics.json
+!reports/metrics/gnn_node_metrics_full_context.json
+!reports/metrics/level_5_subgraph_baseline_metrics.json
+
+
+# ============================================================
+# Experimentos pesados
+# ============================================================
+
+experiments/**/outputs/

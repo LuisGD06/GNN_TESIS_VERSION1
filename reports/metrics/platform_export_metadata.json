@@ -1,0 +1,23 @@
+{
+    "level": 6,
+    "name": "platform_export",
+    "description": "Exportación de artefactos para plataforma analítica AML.",
+    "methodology_status": {
+        "level_1_graph_eda": "completed",
+        "level_2_classic_baselines": "completed",
+        "level_3_gnn_node_classification": "completed",
+        "level_4_subgraph_analysis": "completed",
+        "level_5_subgraph_baselines": "completed",
+        "level_6_platform_export": "completed"
+    },
+    "modeling_decision": {
+        "primary_model": "XGBoost baseline",
+        "reason": "Se selecciona el modelo con mayor PR-AUC en test, debido al desbalance de clases y al objetivo AML.",
+        "observations": [
+            "Las features originales de Elliptic dominaron el desempeño predictivo.",
+            "Las GNN presentaron recall alto, pero baja precisión.",
+            "Las features de subgrafos aportaron valor descriptivo, pero no mejoraron sustancialmente el baseline.",
+            "Los nodos unknown se usan para priorización de riesgo y contexto estructural, no como clase negativa supervisada."
+        ]
+    }
+}
