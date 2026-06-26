@@ -1,0 +1,12 @@
+priority_level,label,count
+critical,illicit,1491
+critical,unknown,547
+high,illicit,2621
+high,licit,15
+high,unknown,5515
+low,illicit,256
+low,licit,40816
+low,unknown,121943
+medium,illicit,177
+medium,licit,1188
+medium,unknown,29200

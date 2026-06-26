@@ -1,0 +1,5 @@
+error_type,count,percentage
+TN_licit_correct,41688,0.8952839103169831
+TP_illicit_detected,4257,0.0914225581994674
+FP_licit_alerted,331,0.007108495833691264
+FN_illicit_missed,288,0.006185035649858259

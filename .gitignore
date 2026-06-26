@@ -67,6 +67,14 @@ reports/tables/*
 !reports/tables/.gitkeep
 !reports/tables/final_model_comparison.csv
 
+!reports/tables/error_confusion_summary.csv
+!reports/tables/error_cases_false_positives_top.csv
+!reports/tables/error_cases_false_negatives_top.csv
+!reports/tables/error_score_by_label.csv
+!reports/tables/error_score_by_timestep.csv
+!reports/tables/error_priority_by_label.csv
+!reports/tables/error_recall_at_k.csv
+
 # Métricas: ignorar todas salvo las necesarias para trazabilidad/dashboard
 reports/metrics/*
 !reports/metrics/.gitkeep
@@ -77,6 +85,7 @@ reports/metrics/*
 !reports/metrics/gnn_node_metrics_full_context.json
 !reports/metrics/level_5_subgraph_baseline_metrics.json
 
+!reports/metrics/error_analysis_summary.json
 
 # ============================================================
 # Experimentos pesados

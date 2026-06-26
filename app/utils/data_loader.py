@@ -17,6 +17,15 @@ FINAL_MODEL_COMPARISON_PATH = REPORTS_DIR / "tables" / "final_model_comparison.c
 PLATFORM_METRICS_SUMMARY_PATH = REPORTS_DIR / "metrics" / "platform_metrics_summary.json"
 PLATFORM_EXPORT_METADATA_PATH = REPORTS_DIR / "metrics" / "platform_export_metadata.json"
 
+ERROR_CONFUSION_SUMMARY_PATH = REPORTS_DIR / "tables" / "error_confusion_summary.csv"
+ERROR_FALSE_POSITIVES_PATH = REPORTS_DIR / "tables" / "error_cases_false_positives_top.csv"
+ERROR_FALSE_NEGATIVES_PATH = REPORTS_DIR / "tables" / "error_cases_false_negatives_top.csv"
+ERROR_SCORE_BY_LABEL_PATH = REPORTS_DIR / "tables" / "error_score_by_label.csv"
+ERROR_SCORE_BY_TIMESTEP_PATH = REPORTS_DIR / "tables" / "error_score_by_timestep.csv"
+ERROR_PRIORITY_BY_LABEL_PATH = REPORTS_DIR / "tables" / "error_priority_by_label.csv"
+ERROR_RECALL_AT_K_PATH = REPORTS_DIR / "tables" / "error_recall_at_k.csv"
+ERROR_ANALYSIS_SUMMARY_PATH = REPORTS_DIR / "metrics" / "error_analysis_summary.json"
+
 
 def file_exists(path: Path) -> bool:
     return path.exists() and path.is_file()
@@ -83,3 +92,50 @@ def check_required_files() -> dict:
         "platform_metrics_summary.json": file_exists(PLATFORM_METRICS_SUMMARY_PATH),
         "platform_export_metadata.json": file_exists(PLATFORM_EXPORT_METADATA_PATH),
     }
+
+def load_error_confusion_summary() -> pd.DataFrame | None:
+    if not file_exists(ERROR_CONFUSION_SUMMARY_PATH):
+        return None
+    return load_csv(str(ERROR_CONFUSION_SUMMARY_PATH))
+
+
+def load_error_false_positives() -> pd.DataFrame | None:
+    if not file_exists(ERROR_FALSE_POSITIVES_PATH):
+        return None
+    return load_csv(str(ERROR_FALSE_POSITIVES_PATH))
+
+
+def load_error_false_negatives() -> pd.DataFrame | None:
+    if not file_exists(ERROR_FALSE_NEGATIVES_PATH):
+        return None
+    return load_csv(str(ERROR_FALSE_NEGATIVES_PATH))
+
+
+def load_error_score_by_label() -> pd.DataFrame | None:
+    if not file_exists(ERROR_SCORE_BY_LABEL_PATH):
+        return None
+    return load_csv(str(ERROR_SCORE_BY_LABEL_PATH))
+
+
+def load_error_score_by_timestep() -> pd.DataFrame | None:
+    if not file_exists(ERROR_SCORE_BY_TIMESTEP_PATH):
+        return None
+    return load_csv(str(ERROR_SCORE_BY_TIMESTEP_PATH))
+
+
+def load_error_priority_by_label() -> pd.DataFrame | None:
+    if not file_exists(ERROR_PRIORITY_BY_LABEL_PATH):
+        return None
+    return load_csv(str(ERROR_PRIORITY_BY_LABEL_PATH))
+
+
+def load_error_recall_at_k() -> pd.DataFrame | None:
+    if not file_exists(ERROR_RECALL_AT_K_PATH):
+        return None
+    return load_csv(str(ERROR_RECALL_AT_K_PATH))
+
+
+def load_error_analysis_summary() -> dict | None:
+    if not file_exists(ERROR_ANALYSIS_SUMMARY_PATH):
+        return None
+    return load_json(str(ERROR_ANALYSIS_SUMMARY_PATH))

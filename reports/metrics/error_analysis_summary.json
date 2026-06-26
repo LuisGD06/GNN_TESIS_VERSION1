@@ -1,0 +1,40 @@
+{
+  "dataset": {
+    "total_predictions": 203769,
+    "total_labeled": 46564,
+    "total_unknown": 157205
+  },
+  "confusion_matrix_counts": {
+    "tp_illicit_detected": 4257,
+    "tn_licit_correct": 41688,
+    "fp_licit_alerted": 331,
+    "fn_illicit_missed": 288
+  },
+  "metrics_from_platform_predictions": {
+    "accuracy": 0.9867064685164505,
+    "precision": 0.9278552746294682,
+    "recall": 0.9366336633663367,
+    "f1": 0.9322238037884595
+  },
+  "recall_at_k": {
+    "50.0": 0.011001100110011002,
+    "100.0": 0.022002200220022004,
+    "200.0": 0.04400440044004401,
+    "500.0": 0.11001100110011001,
+    "1000.0": 0.22002200220022003,
+    "2000.0": 0.44004400440044006,
+    "5000.0": 0.9405940594059405
+  },
+  "unknown_risk_summary": {
+    "num_unknown": 157205,
+    "unknown_mean_score": 0.14951862394809723,
+    "unknown_median_score": 0.01840299554169178,
+    "unknown_critical_count": 547,
+    "unknown_high_count": 5515
+  },
+  "interpretation_notes": {
+    "fp": "Falsos positivos: transacciones lícitas priorizadas como riesgosas. En AML pueden representar fricción operativa, pero también casos para revisión preventiva.",
+    "fn": "Falsos negativos: transacciones ilícitas no detectadas. En AML son críticos porque representan riesgo no capturado.",
+    "unknown": "Los nodos unknown no se usan para evaluación supervisada; sus scores se interpretan como priorización de riesgo."
+  }
+}
