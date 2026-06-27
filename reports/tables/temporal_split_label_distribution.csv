@@ -1,10 +1,10 @@
 split,label,count
-test,illicit,636
-test,licit,10548
-test,unknown,35463
+test,illicit,169
+test,licit,6518
+test,unknown,22997
 train,illicit,3462
 train,licit,26432
 train,unknown,106371
-validation,illicit,447
-validation,licit,5039
-validation,unknown,15371
+validation,illicit,914
+validation,licit,9069
+validation,unknown,27837
