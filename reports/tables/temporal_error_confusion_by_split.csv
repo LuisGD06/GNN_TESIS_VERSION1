@@ -1,0 +1,13 @@
+split,error_type,count,split_total,percentage
+test,FN_illicit_missed,254,11184,0.02271101573676681
+test,FP_licit_alerted,196,11184,0.017525035765379112
+test,TN_licit_correct,10352,11184,0.9256080114449213
+test,TP_illicit_detected,382,11184,0.03415593705293276
+train,FN_illicit_missed,1,29894,3.3451528734863186e-05
+train,FP_licit_alerted,71,29894,0.002375058540175286
+train,TN_licit_correct,26361,29894,0.8818157489797284
+train,TP_illicit_detected,3461,29894,0.11577574095136148
+validation,FN_illicit_missed,33,5486,0.006015311702515494
+validation,FP_licit_alerted,64,5486,0.011666059059423988
+validation,TN_licit_correct,4975,5486,0.9068538096974116
+validation,TP_illicit_detected,414,5486,0.07546481954064893

@@ -75,6 +75,14 @@ reports/tables/*
 !reports/tables/error_priority_by_label.csv
 !reports/tables/error_recall_at_k.csv
 
+!reports/tables/temporal_split_label_distribution.csv
+!reports/tables/temporal_error_confusion_by_split.csv
+!reports/tables/temporal_error_metrics_by_split.csv
+!reports/tables/temporal_error_recall_at_k_by_split.csv
+!reports/tables/temporal_error_score_by_label_split.csv
+!reports/tables/temporal_error_false_positives_test_top.csv
+!reports/tables/temporal_error_false_negatives_test_top.csv
+
 # Métricas: ignorar todas salvo las necesarias para trazabilidad/dashboard
 reports/metrics/*
 !reports/metrics/.gitkeep
@@ -86,6 +94,7 @@ reports/metrics/*
 !reports/metrics/level_5_subgraph_baseline_metrics.json
 
 !reports/metrics/error_analysis_summary.json
+!reports/metrics/temporal_error_analysis_summary.json
 
 # ============================================================
 # Experimentos pesados

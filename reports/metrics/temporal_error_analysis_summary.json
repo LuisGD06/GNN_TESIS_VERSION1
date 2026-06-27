@@ -1,0 +1,61 @@
+{
+  "important_note": "Este análisis separa los resultados por split temporal. Para la tesis, las métricas principales de generalización deben reportarse sobre test.",
+  "split_definition": {
+    "train": "timestep <= 34",
+    "validation": "35 <= timestep <= 39",
+    "test": "timestep >= 40"
+  },
+  "metrics_by_split": {
+    "train": {
+      "total": 29894,
+      "tp": 3461,
+      "tn": 26361,
+      "fp": 71,
+      "fn": 1,
+      "accuracy": 0.9975914899310898,
+      "precision": 0.9798980747451869,
+      "recall": 0.9997111496244945,
+      "f1": 0.9897054618244209
+    },
+    "validation": {
+      "total": 5486,
+      "tp": 414,
+      "tn": 4975,
+      "fp": 64,
+      "fn": 33,
+      "accuracy": 0.9823186292380606,
+      "precision": 0.8661087866108786,
+      "recall": 0.9261744966442953,
+      "f1": 0.8951351351351352
+    },
+    "test": {
+      "total": 11184,
+      "tp": 382,
+      "tn": 10352,
+      "fp": 196,
+      "fn": 254,
+      "accuracy": 0.9597639484978541,
+      "precision": 0.6608996539792388,
+      "recall": 0.60062893081761,
+      "f1": 0.629324546952224
+    }
+  },
+  "test_recall_at_k": {
+    "50": 0.07861635220125786,
+    "100": 0.15723270440251572,
+    "200": 0.31446540880503143,
+    "500": 0.5990566037735849,
+    "1000": 0.6320754716981132,
+    "2000": 0.7044025157232704,
+    "5000": 0.9528301886792453
+  },
+  "files_generated": {
+    "split_label_distribution": "reports/tables/temporal_split_label_distribution.csv",
+    "confusion_by_split": "reports/tables/temporal_error_confusion_by_split.csv",
+    "metrics_by_split": "reports/tables/temporal_error_metrics_by_split.csv",
+    "recall_at_k_by_split": "reports/tables/temporal_error_recall_at_k_by_split.csv",
+    "score_by_label_split": "reports/tables/temporal_error_score_by_label_split.csv",
+    "false_positives_test": "reports/tables/temporal_error_false_positives_test_top.csv",
+    "false_negatives_test": "reports/tables/temporal_error_false_negatives_test_top.csv"
+  }
+}
