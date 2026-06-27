@@ -466,3 +466,98 @@ st.markdown(
 - **unknown:** transacción sin etiqueta confirmada; no debe interpretarse automáticamente como ilícita.
 """
 )
+
+st.divider()
+
+st.subheader("7. Reporte operativo del archivo cargado")
+
+found_for_report_df = result_df[result_df["match_status"] == "Encontrado"].copy()
+
+if found_for_report_df.empty:
+    st.warning(
+        "No se encontraron transacciones del archivo dentro de los scores generados. "
+        "No es posible construir un reporte operativo de riesgo."
+    )
+else:
+    top_risky_df = (
+        found_for_report_df
+        .sort_values("score_illicit", ascending=False)
+        .head(10)
+        .copy()
+    )
+
+    num_unknown = int((found_for_report_df["label"] == "unknown").sum())
+    num_illicit = int((found_for_report_df["label"] == "illicit").sum())
+    num_licit = int((found_for_report_df["label"] == "licit").sum())
+
+    max_score = float(found_for_report_df["score_illicit"].max())
+    mean_score = float(found_for_report_df["score_illicit"].mean())
+
+    top_txid = str(top_risky_df.iloc[0]["txId_platform"]) if "txId_platform" in top_risky_df.columns else str(top_risky_df.iloc[0]["txId"])
+    top_score = float(top_risky_df.iloc[0]["score_illicit"])
+    top_priority = str(top_risky_df.iloc[0]["priority_level"])
+
+    operative_summary = f"""
+**Resumen operativo AML**
+
+Se cargaron **{total_uploaded:,}** registros para consulta. 
+De ellos, **{total_found:,}** fueron encontrados dentro de los artefactos del prototipo y **{total_not_found:,}** no tuvieron coincidencia.
+
+Entre las transacciones encontradas, se identificaron:
+
+- **{critical_count:,}** transacciones con prioridad crítica.
+- **{high_count:,}** transacciones con prioridad alta.
+- **{medium_count:,}** transacciones con prioridad media.
+- **{num_illicit:,}** transacciones con etiqueta conocida ilícita.
+- **{num_licit:,}** transacciones con etiqueta conocida lícita.
+- **{num_unknown:,}** transacciones sin etiqueta confirmada.
+
+El score promedio del archivo consultado fue **{mean_score:.4f}**, mientras que el score máximo observado fue **{max_score:.4f}**.
+La transacción con mayor prioridad dentro del archivo fue **{top_txid}**, con score **{top_score:.4f}** y nivel de prioridad **{top_priority}**.
+
+Este resultado debe interpretarse como una priorización de revisión AML. Las transacciones con etiqueta unknown no deben asumirse automáticamente como ilícitas, sino como casos que requieren análisis adicional.
+"""
+
+    st.markdown(operative_summary)
+
+    st.markdown("### Top 10 transacciones más riesgosas del archivo")
+
+    top_cols = [
+        col for col in [
+            "txId_platform",
+            "txId",
+            "label",
+            "timestep",
+            "score_illicit",
+            "priority_level",
+            "risk_rank",
+            "in_degree",
+            "out_degree",
+            "total_degree",
+        ]
+        if col in top_risky_df.columns
+    ]
+
+    st.dataframe(top_risky_df[top_cols], width="stretch")
+
+    st.download_button(
+        label="Descargar resumen operativo TXT",
+        data=operative_summary.encode("utf-8"),
+        file_name="resumen_operativo_aml.txt",
+        mime="text/plain",
+    )
+
+    if critical_count + high_count > 0:
+        st.error(
+            "El archivo cargado contiene transacciones con prioridad critical/high. "
+            "Se recomienda revisión prioritaria."
+        )
+    elif medium_count > 0:
+        st.warning(
+            "El archivo cargado contiene transacciones de prioridad media. "
+            "Se recomienda revisión complementaria según política AML."
+        )
+    else:
+        st.success(
+            "No se identificaron transacciones de prioridad crítica o alta en el archivo cargado."
+        )
