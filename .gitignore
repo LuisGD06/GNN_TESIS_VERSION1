@@ -40,7 +40,7 @@ data/processed/elliptic/*
 !data/processed/elliptic/platform_predictions.parquet
 !data/processed/elliptic/platform_alerts_top.parquet
 !data/processed/elliptic/subgraph_alerts.parquet
-
+!data/processed/elliptic/platform_edges.parquet
 
 # ============================================================
 # Modelos entrenados: NO subir a GitHub
