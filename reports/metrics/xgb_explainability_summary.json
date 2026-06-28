@@ -1,0 +1,42 @@
+{
+  "model": "XGBoost baseline",
+  "num_required_features": 168,
+  "shap_sample": {
+    "split": "test",
+    "sample_size": 2000,
+    "source": "/home/lucho/aml-gnn-tesis/data/interim/elliptic/nodes_with_graph_features.parquet"
+  },
+  "outputs": {
+    "model_feature_importance": "/home/lucho/aml-gnn-tesis/reports/tables/xgb_model_feature_importance.csv",
+    "shap_global_importance": "/home/lucho/aml-gnn-tesis/reports/tables/xgb_shap_global_importance.csv",
+    "local_explanations_top_alerts": "/home/lucho/aml-gnn-tesis/reports/tables/xgb_local_explanations_top_alerts.csv"
+  },
+  "top_10_model_importance_features": [
+    "f_52",
+    "f_89",
+    "f_40",
+    "f_162",
+    "f_39",
+    "f_45",
+    "f_102",
+    "f_58",
+    "f_99",
+    "f_131"
+  ],
+  "top_10_shap_features": [
+    "f_52",
+    "f_58",
+    "f_124",
+    "f_89",
+    "f_2",
+    "f_160",
+    "f_45",
+    "f_131",
+    "f_15",
+    "f_57"
+  ],
+  "feature_group_counts_top_20_shap": {
+    "elliptic_original_feature": 20
+  },
+  "methodological_note": "La importancia interna de XGBoost y SHAP se utilizan para interpretar el modelo principal. SHAP se calcula sobre una muestra del split test para explicar la contribución promedio de las variables en datos de generalización."
+}

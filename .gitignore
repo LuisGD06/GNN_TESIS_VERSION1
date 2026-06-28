@@ -83,6 +83,9 @@ reports/tables/*
 !reports/tables/temporal_error_score_by_label_split.csv
 !reports/tables/temporal_error_false_positives_test_top.csv
 !reports/tables/temporal_error_false_negatives_test_top.csv
+!reports/tables/xgb_model_feature_importance.csv
+!reports/tables/xgb_shap_global_importance.csv
+!reports/tables/xgb_local_explanations_top_alerts.csv
 
 # Métricas: ignorar todas salvo las necesarias para trazabilidad/dashboard
 reports/metrics/*
@@ -98,6 +101,8 @@ reports/metrics/*
 !reports/metrics/temporal_error_analysis_summary.json
 !reports/metrics/inference_schema_xgboost.json
 !reports/metrics/platform_integrity_report.json
+!reports/metrics/xgb_explainability_summary.json
+
 # ============================================================
 # Experimentos pesados
 # ============================================================
