@@ -41,6 +41,7 @@ data/processed/elliptic/*
 !data/processed/elliptic/platform_alerts_top.parquet
 !data/processed/elliptic/subgraph_alerts.parquet
 !data/processed/elliptic/platform_edges.parquet
+!data/processed/elliptic/inference_template_xgboost.csv
 
 # ============================================================
 # Modelos entrenados: NO subir a GitHub
@@ -95,7 +96,7 @@ reports/metrics/*
 
 !reports/metrics/error_analysis_summary.json
 !reports/metrics/temporal_error_analysis_summary.json
-
+!reports/metrics/inference_schema_xgboost.json
 # ============================================================
 # Experimentos pesados
 # ============================================================
