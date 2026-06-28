@@ -1,0 +1,140 @@
+{
+  "project_root": "/home/lucho/aml-gnn-tesis",
+  "files": {
+    "platform_predictions": {
+      "path": "/home/lucho/aml-gnn-tesis/data/processed/elliptic/platform_predictions.parquet",
+      "exists": true,
+      "size_mb": 5.8517
+    },
+    "platform_alerts_top": {
+      "path": "/home/lucho/aml-gnn-tesis/data/processed/elliptic/platform_alerts_top.parquet",
+      "exists": true,
+      "size_mb": 0.0298
+    },
+    "subgraph_alerts": {
+      "path": "/home/lucho/aml-gnn-tesis/data/processed/elliptic/subgraph_alerts.parquet",
+      "exists": true,
+      "size_mb": 0.0588
+    },
+    "platform_edges": {
+      "path": "/home/lucho/aml-gnn-tesis/data/processed/elliptic/platform_edges.parquet",
+      "exists": true,
+      "size_mb": 2.8347
+    },
+    "final_model_comparison": {
+      "path": "/home/lucho/aml-gnn-tesis/reports/tables/final_model_comparison.csv",
+      "exists": true,
+      "size_mb": 0.0026
+    },
+    "platform_metrics_summary": {
+      "path": "/home/lucho/aml-gnn-tesis/reports/metrics/platform_metrics_summary.json",
+      "exists": true,
+      "size_mb": 0.0015
+    },
+    "error_analysis_summary": {
+      "path": "/home/lucho/aml-gnn-tesis/reports/metrics/error_analysis_summary.json",
+      "exists": true,
+      "size_mb": 0.0013
+    },
+    "temporal_error_analysis_summary": {
+      "path": "/home/lucho/aml-gnn-tesis/reports/metrics/temporal_error_analysis_summary.json",
+      "exists": true,
+      "size_mb": 0.0019
+    },
+    "inference_schema_xgboost": {
+      "path": "/home/lucho/aml-gnn-tesis/reports/metrics/inference_schema_xgboost.json",
+      "exists": true,
+      "size_mb": 0.0026
+    },
+    "inference_template_xgboost": {
+      "path": "/home/lucho/aml-gnn-tesis/data/processed/elliptic/inference_template_xgboost.csv",
+      "exists": true,
+      "size_mb": 0.0319
+    },
+    "baseline_xgboost_model": {
+      "path": "/home/lucho/aml-gnn-tesis/models/baseline_xgboost.pkl",
+      "exists": true,
+      "size_mb": 0.6031
+    }
+  },
+  "pages": {
+    "dashboard_aml": {
+      "path": "/home/lucho/aml-gnn-tesis/app/pages/1_dashboard_aml.py",
+      "exists": true
+    },
+    "alertas_priorizadas": {
+      "path": "/home/lucho/aml-gnn-tesis/app/pages/2_alertas_priorizadas.py",
+      "exists": true
+    },
+    "comparacion_modelos": {
+      "path": "/home/lucho/aml-gnn-tesis/app/pages/3_comparacion_modelos.py",
+      "exists": true
+    },
+    "analisis_subgrafos": {
+      "path": "/home/lucho/aml-gnn-tesis/app/pages/4_analisis_subgrafos.py",
+      "exists": true
+    },
+    "detalle_transaccion": {
+      "path": "/home/lucho/aml-gnn-tesis/app/pages/5_detalle_transaccion.py",
+      "exists": true
+    },
+    "analisis_errores": {
+      "path": "/home/lucho/aml-gnn-tesis/app/pages/6_analisis_errores.py",
+      "exists": true
+    },
+    "validacion_temporal": {
+      "path": "/home/lucho/aml-gnn-tesis/app/pages/7_validacion_temporal.py",
+      "exists": true
+    },
+    "carga_scoring_aml": {
+      "path": "/home/lucho/aml-gnn-tesis/app/pages/8_carga_scoring_aml.py",
+      "exists": true
+    },
+    "vecindario_transaccional": {
+      "path": "/home/lucho/aml-gnn-tesis/app/pages/9_vecindario_transaccional.py",
+      "exists": true
+    },
+    "inferencia_xgboost": {
+      "path": "/home/lucho/aml-gnn-tesis/app/pages/10_inferencia_xgboost.py",
+      "exists": true
+    }
+  },
+  "platform_predictions_check": {
+    "status": "passed",
+    "shape": [
+      203769,
+      12
+    ],
+    "missing_columns": [],
+    "label_counts": {
+      "unknown": 157205,
+      "licit": 42019,
+      "illicit": 4545
+    },
+    "priority_counts": {
+      "low": 163015,
+      "medium": 30565,
+      "high": 8151,
+      "critical": 2038
+    },
+    "score_min": 5.571973247242568e-07,
+    "score_max": 0.9999552965164185
+  },
+  "inference_schema_template_check": {
+    "status": "passed",
+    "num_required_features": 168,
+    "template_shape": [
+      10,
+      169
+    ],
+    "missing_template_features": [],
+    "has_txId": true
+  },
+  "xgboost_inference_smoke_test": {
+    "status": "passed",
+    "num_predictions": 10,
+    "score_min": 1.770294147718232e-05,
+    "score_max": 0.03524203225970268
+  },
+  "overall_status": "passed"
+}

@@ -97,6 +97,7 @@ reports/metrics/*
 !reports/metrics/error_analysis_summary.json
 !reports/metrics/temporal_error_analysis_summary.json
 !reports/metrics/inference_schema_xgboost.json
+!reports/metrics/platform_integrity_report.json
 # ============================================================
 # Experimentos pesados
 # ============================================================
