@@ -395,7 +395,7 @@ def main() -> None:
     with open(OUTPUT_JSON, "w", encoding="utf-8") as file:
         json.dump(final_summary, file, indent=2, ensure_ascii=False)
 
-    print("\nResumen final analítico generado correctamente.")
+    print("\nResumen final analítico ")
     print(f"Tabla: {OUTPUT_TABLE}")
     print(f"JSON: {OUTPUT_JSON}")
 

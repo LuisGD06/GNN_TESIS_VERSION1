@@ -69,7 +69,7 @@ st.divider()
 
 st.subheader("Matriz de errores")
 
-st.dataframe(confusion_df, use_container_width=True)
+st.dataframe(confusion_df, width="stretch")
 
 fig_confusion = px.bar(
     confusion_df,
@@ -81,7 +81,7 @@ fig_confusion = px.bar(
 
 fig_confusion.update_layout(xaxis_tickangle=-30)
 
-st.plotly_chart(fig_confusion, use_container_width=True)
+st.plotly_chart(fig_confusion, width="stretch")
 
 st.markdown(
     """
@@ -96,7 +96,7 @@ st.divider()
 st.subheader("Recall@K")
 
 if recall_at_k_df is not None:
-    st.dataframe(recall_at_k_df, use_container_width=True)
+    st.dataframe(recall_at_k_df, width="stretch")
 
     fig_recall = px.line(
         recall_at_k_df,
@@ -106,7 +106,7 @@ if recall_at_k_df is not None:
         title="Recall acumulado en el ranking de alertas",
     )
 
-    st.plotly_chart(fig_recall, use_container_width=True)
+    st.plotly_chart(fig_recall, width="stretch")
 
     st.info(
         "Recall@K indica qué proporción de transacciones ilícitas conocidas aparece dentro de las primeras K alertas ordenadas por score."
@@ -117,7 +117,7 @@ st.divider()
 st.subheader("Distribución de score por etiqueta")
 
 if score_by_label_df is not None:
-    st.dataframe(score_by_label_df, use_container_width=True)
+    st.dataframe(score_by_label_df, width="stretch")
 
     fig_score_label = px.bar(
         score_by_label_df,
@@ -127,7 +127,7 @@ if score_by_label_df is not None:
         title="Score ilícito promedio por etiqueta",
     )
 
-    st.plotly_chart(fig_score_label, use_container_width=True)
+    st.plotly_chart(fig_score_label, width="stretch")
 
 st.divider()
 
@@ -155,16 +155,16 @@ if score_by_timestep_df is not None:
         title="Evolución temporal del score promedio por etiqueta",
     )
 
-    st.plotly_chart(fig_timestep, use_container_width=True)
+    st.plotly_chart(fig_timestep, width="stretch")
 
-    st.dataframe(filtered_timestep_df, use_container_width=True)
+    st.dataframe(filtered_timestep_df, width="stretch")
 
 st.divider()
 
 st.subheader("Prioridad por etiqueta")
 
 if priority_by_label_df is not None:
-    st.dataframe(priority_by_label_df, use_container_width=True)
+    st.dataframe(priority_by_label_df, width="stretch")
 
     fig_priority = px.bar(
         priority_by_label_df,
@@ -175,7 +175,7 @@ if priority_by_label_df is not None:
         title="Distribución de prioridad por etiqueta",
     )
 
-    st.plotly_chart(fig_priority, use_container_width=True)
+    st.plotly_chart(fig_priority, width="stretch")
 
 st.divider()
 
@@ -189,7 +189,7 @@ En una plataforma AML real, estos casos pueden generar revisión manual innecesa
 """
     )
 
-    st.dataframe(false_positives_df, use_container_width=True)
+    st.dataframe(false_positives_df, width="stretch")
 
 st.divider()
 
@@ -203,7 +203,7 @@ Estos casos deben analizarse para mejorar umbrales, features, reglas complementa
 """
     )
 
-    st.dataframe(false_negatives_df, use_container_width=True)
+    st.dataframe(false_negatives_df, width="stretch")
 
 st.divider()
 

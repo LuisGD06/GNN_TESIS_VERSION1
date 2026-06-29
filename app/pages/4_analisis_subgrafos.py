@@ -39,7 +39,7 @@ st.subheader("Alertas con features de subgrafos")
 
 st.dataframe(
     filtered_df,
-    use_container_width=True,
+    width="stretch",
 )
 
 st.subheader("Tamaño de subgrafo k=1 vs k=2")
@@ -55,7 +55,7 @@ if "subgraph_num_nodes_k1" in filtered_df.columns and "subgraph_num_nodes_k2" in
         title="Tamaño de subgrafo k=1 vs k=2",
     )
 
-    st.plotly_chart(fig_size, use_container_width=True)
+    st.plotly_chart(fig_size, width="stretch")
 
 st.subheader("Ratio unknown en vecindarios")
 
@@ -81,7 +81,7 @@ if ratio_cols:
         title="Distribución de ratio unknown neighbors en alertas",
     )
 
-    st.plotly_chart(fig_unknown, use_container_width=True)
+    st.plotly_chart(fig_unknown, width="stretch")
 
 st.info(
     "Estas variables estructurales no reemplazan al score del modelo. Sirven para interpretar el contexto local de las alertas."

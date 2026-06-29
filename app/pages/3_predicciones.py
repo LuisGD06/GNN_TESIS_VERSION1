@@ -92,7 +92,7 @@ columns_to_show = [col for col in columns_to_show if col in filtered_df.columns]
 
 st.dataframe(
     filtered_df[columns_to_show],
-    use_container_width=True,
+    width="stretch",
 )
 
 st.subheader("Distribución de scores")
@@ -105,7 +105,7 @@ fig_score = px.histogram(
     title="Distribución de score ilícito",
 )
 
-st.plotly_chart(fig_score, use_container_width=True)
+st.plotly_chart(fig_score, width="stretch")
 
 st.subheader("Resumen por prioridad y etiqueta")
 
@@ -125,7 +125,7 @@ fig_summary = px.bar(
     title="Registros por prioridad y etiqueta",
 )
 
-st.plotly_chart(fig_summary, use_container_width=True)
+st.plotly_chart(fig_summary, width="stretch")
 
 st.warning(
     "Los nodos unknown con score alto no son ilícitos confirmados. "

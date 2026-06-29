@@ -55,7 +55,7 @@ fig_priority = px.bar(
     title="Distribución de prioridad por etiqueta",
 )
 
-st.plotly_chart(fig_priority, use_container_width=True)
+st.plotly_chart(fig_priority, width="stretch")
 
 st.subheader("Distribución de scores de riesgo")
 
@@ -67,7 +67,7 @@ fig_score = px.histogram(
     title="Distribución de score ilícito por etiqueta",
 )
 
-st.plotly_chart(fig_score, use_container_width=True)
+st.plotly_chart(fig_score, width="stretch")
 
 st.subheader("Top 20 transacciones con mayor score")
 
@@ -87,7 +87,7 @@ st.dataframe(
             "total_degree",
         ]
     ],
-    use_container_width=True,
+    width="stretch",
 )
 
 if metrics_summary:

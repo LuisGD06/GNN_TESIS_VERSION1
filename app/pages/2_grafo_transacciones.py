@@ -78,7 +78,7 @@ columns_to_show = [
 
 st.dataframe(
     filtered_df[columns_to_show],
-    use_container_width=True,
+    width="stretch",
 )
 
 st.subheader("Tamaño de subgrafo k=1 vs k=2")
@@ -93,7 +93,7 @@ if "subgraph_num_nodes_k1" in filtered_df.columns and "subgraph_num_nodes_k2" in
         hover_name="txId",
         title="Tamaño de subgrafo k=1 vs k=2",
     )
-    st.plotly_chart(fig_size, use_container_width=True)
+    st.plotly_chart(fig_size, width="stretch")
 else:
     st.info("No se encontraron columnas de tamaño de subgrafo k=1/k=2.")
 
@@ -121,7 +121,7 @@ if ratio_unknown_cols:
         title="Distribución de ratio unknown neighbors",
     )
 
-    st.plotly_chart(fig_unknown, use_container_width=True)
+    st.plotly_chart(fig_unknown, width="stretch")
 
 st.subheader("Ratio de vecinos ilícitos")
 
@@ -147,7 +147,7 @@ if ratio_illicit_cols:
         title="Distribución de ratio illicit neighbors",
     )
 
-    st.plotly_chart(fig_illicit, use_container_width=True)
+    st.plotly_chart(fig_illicit, width="stretch")
 
 st.info(
     "Estas variables estructurales ayudan a interpretar el contexto local de las alertas, "

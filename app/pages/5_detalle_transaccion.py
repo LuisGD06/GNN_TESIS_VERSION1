@@ -88,7 +88,7 @@ display_cols = [
     if col in result.columns
 ]
 
-st.dataframe(result[display_cols], use_container_width=True)
+st.dataframe(result[display_cols], width="stretch")
 
 st.divider()
 
@@ -116,7 +116,7 @@ if subgraph_alerts_df is not None:
 
         st.dataframe(
             subgraph_result[structural_cols],
-            use_container_width=True,
+            width="stretch",
         )
     else:
         st.info(

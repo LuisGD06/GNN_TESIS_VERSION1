@@ -53,7 +53,7 @@ status_df = [
     for name, exists in file_status.items()
 ]
 
-st.dataframe(status_df, use_container_width=True)
+st.dataframe(status_df, width="stretch")
 
 missing_files = [name for name, exists in file_status.items() if not exists]
 
@@ -84,7 +84,7 @@ st.subheader("Resumen comparativo de modelos")
 if model_comparison_df is not None:
     st.dataframe(
         model_comparison_df.sort_values("pr_auc", ascending=False),
-        use_container_width=True,
+        width="stretch",
     )
 
 st.info(

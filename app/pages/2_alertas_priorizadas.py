@@ -73,7 +73,7 @@ st.dataframe(
             "total_degree",
         ]
     ],
-    use_container_width=True,
+    width="stretch",
 )
 
 st.subheader("Alertas por etiqueta y prioridad")
@@ -94,7 +94,7 @@ fig = px.bar(
     title="Alertas filtradas por prioridad y etiqueta",
 )
 
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, width="stretch")
 
 st.warning(
     "Las alertas con etiqueta unknown no son ilícitas confirmadas. Deben interpretarse como casos priorizados para revisión."

@@ -44,7 +44,7 @@ st.subheader("Tabla comparativa final")
 
 st.dataframe(
     comparison_df,
-    use_container_width=True,
+    width="stretch",
 )
 
 st.subheader("Ranking por PR-AUC")
@@ -59,7 +59,7 @@ fig_pr_auc = px.bar(
 
 fig_pr_auc.update_layout(xaxis_tickangle=-70)
 
-st.plotly_chart(fig_pr_auc, use_container_width=True)
+st.plotly_chart(fig_pr_auc, width="stretch")
 
 st.subheader("Precision vs Recall")
 
@@ -73,7 +73,7 @@ fig_pr = px.scatter(
     title="Relación precision-recall por modelo",
 )
 
-st.plotly_chart(fig_pr, use_container_width=True)
+st.plotly_chart(fig_pr, width="stretch")
 
 st.subheader("F1 vs PR-AUC")
 
@@ -87,7 +87,7 @@ fig_f1 = px.scatter(
     title="Relación F1 y PR-AUC",
 )
 
-st.plotly_chart(fig_f1, use_container_width=True)
+st.plotly_chart(fig_f1, width="stretch")
 
 st.markdown(
     """
