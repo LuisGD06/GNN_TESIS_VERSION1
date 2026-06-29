@@ -13,14 +13,14 @@ Predicciones de plataforma,Nodos licit,42019,Transacciones con etiqueta lícita 
 Predicciones de plataforma,Nodos unknown,157205,Transacciones sin etiqueta confirmada.
 Predicciones de plataforma,Alertas critical,2038,Transacciones ubicadas en el percentil más alto de riesgo.
 Predicciones de plataforma,Alertas high,8151,Transacciones de prioridad alta.
-Validación temporal,Total test,6687,Cantidad de nodos etiquetados evaluados en test.
-Validación temporal,Precision test temporal,0.028571,Precision calculada respetando el split temporal original.
-Validación temporal,Recall test temporal,0.023669,Recall calculado sobre datos futuros del split test.
-Validación temporal,F1 test temporal,0.02589,F1 calculado sobre el split test.
-Validación temporal,Recall@50 test,0.023669,Proporción de ilícitos recuperados en las primeras K alertas.
-Validación temporal,Recall@100 test,0.023669,Proporción de ilícitos recuperados en las primeras K alertas.
-Validación temporal,Recall@500 test,0.112426,Proporción de ilícitos recuperados en las primeras K alertas.
-Validación temporal,Recall@1000 test,0.218935,Proporción de ilícitos recuperados en las primeras K alertas.
+Validación temporal,Total test,8841,Cantidad de nodos etiquetados evaluados en test.
+Validación temporal,Precision test temporal,0.536585,Precision calculada respetando el split temporal original.
+Validación temporal,Recall test temporal,0.485294,Recall calculado sobre datos futuros del split test.
+Validación temporal,F1 test temporal,0.509653,F1 calculado sobre el split test.
+Validación temporal,Recall@50 test,0.122549,Proporción de ilícitos recuperados en las primeras K alertas.
+Validación temporal,Recall@100 test,0.245098,Proporción de ilícitos recuperados en las primeras K alertas.
+Validación temporal,Recall@500 test,0.504902,Proporción de ilícitos recuperados en las primeras K alertas.
+Validación temporal,Recall@1000 test,0.558824,Proporción de ilícitos recuperados en las primeras K alertas.
 Análisis de errores,TP illicit detected,4257,Ilícitas detectadas correctamente en análisis global supervisado.
 Análisis de errores,FP licit alerted,331,Lícitas marcadas como riesgo.
 Análisis de errores,FN illicit missed,288,Ilícitas no detectadas.

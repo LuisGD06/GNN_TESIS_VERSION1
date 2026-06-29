@@ -20,12 +20,12 @@ def assign_split(timestep: int) -> str:
     Split temporal usado en los experimentos principales del proyecto.
 
     train: timesteps 1-34
-    validation: timesteps 35-42
-    test: timesteps 43-49
+    validation: timesteps 35-41
+    test: timesteps 42-49
     """
     if timestep <= 34:
         return "train"
-    if 35 <= timestep <= 42:
+    if 35 <= timestep <= 41:
         return "validation"
     return "test"
 
@@ -344,9 +344,9 @@ def main() -> None:
             "Para la tesis, las métricas principales de generalización deben reportarse sobre test."
         ),
         "split_definition": {
-           "train": "timestep <= 34",
-           "validation": "35 <= timestep <= 42",
-           "test": "timestep >= 43",
+            "train": "timestep <= 34",
+            "validation": "35 <= timestep <= 41",
+           "test": "timestep >= 42",
         },
         "metrics_by_split": metrics_summary,
         "test_recall_at_k": {

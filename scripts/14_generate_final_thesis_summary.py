@@ -358,7 +358,7 @@ def main() -> None:
     key_results_df.to_csv(OUTPUT_TABLE, index=False)
 
     final_summary = {
-        "project_status": "analysis_code_ready",
+        "project_status": "codigo_y_analisis_completados",
         "primary_model": primary_model,
         "model_ranking_top_5": model_ranking,
         "platform_counts": platform_counts,
@@ -386,9 +386,6 @@ def main() -> None:
             "El score debe interpretarse como apoyo a priorización, no como decisión automática definitiva.",
             "Las features originales del dataset Elliptic están anonimizadas, por lo que su interpretación semántica directa es limitada.",
         ],
-        "recommended_next_step": (
-            "Pasar a redacción formal de metodología, resultados, discusión, limitaciones y trabajos futuros."
-        ),
         "outputs": {
             "final_thesis_key_results": str(OUTPUT_TABLE),
             "final_thesis_analysis_summary": str(OUTPUT_JSON),
@@ -401,7 +398,6 @@ def main() -> None:
     print("\nResumen final analítico generado correctamente.")
     print(f"Tabla: {OUTPUT_TABLE}")
     print(f"JSON: {OUTPUT_JSON}")
-    print("\nEstado recomendado: listo para redacción formal del documento.")
 
 
 if __name__ == "__main__":
