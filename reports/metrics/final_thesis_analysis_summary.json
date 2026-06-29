@@ -1,0 +1,155 @@
+{
+  "project_status": "analysis_code_ready",
+  "primary_model": {
+    "name": "XGBoost baseline",
+    "family": "baseline_classic",
+    "selection_metric": "pr_auc",
+    "test_pr_auc": 0.5614390083383461,
+    "test_roc_auc": 0.8733779293764227,
+    "test_precision": 0.5365853658536586,
+    "test_recall": 0.4852941176470588,
+    "test_f1": 0.5096525096525096
+  },
+  "model_ranking_top_5": [
+    {
+      "rank": 1,
+      "model": "XGBoost baseline",
+      "family": "baseline_classic",
+      "pr_auc": 0.5614390083383461,
+      "roc_auc": 0.8733779293764227,
+      "precision": 0.5365853658536586,
+      "recall": 0.4852941176470588,
+      "f1": 0.5096525096525096
+    },
+    {
+      "rank": 2,
+      "model": "XGBoost original+subgraph",
+      "family": "subgraph_enriched",
+      "pr_auc": 0.5502550550137272,
+      "roc_auc": 0.8608908047981436,
+      "precision": 0.5380434782608695,
+      "recall": 0.4852941176470588,
+      "f1": 0.5103092783505154
+    },
+    {
+      "rank": 3,
+      "model": "Random Forest original+subgraph",
+      "family": "subgraph_enriched",
+      "pr_auc": 0.5480719796076682,
+      "roc_auc": 0.8643729814942697,
+      "precision": 0.958974358974359,
+      "recall": 0.4583333333333333,
+      "f1": 0.6202321724709784
+    },
+    {
+      "rank": 4,
+      "model": "Random Forest baseline",
+      "family": "baseline_classic",
+      "pr_auc": 0.5475102669081868,
+      "roc_auc": 0.8514482960265809,
+      "precision": 0.958974358974359,
+      "recall": 0.4583333333333333,
+      "f1": 0.6202321724709784
+    },
+    {
+      "rank": 5,
+      "model": "GCN 3A supervised-only",
+      "family": "gnn_node",
+      "pr_auc": 0.2530162254352984,
+      "roc_auc": 0.7996627976460358,
+      "precision": 0.0907269605037206,
+      "recall": 0.7769607843137255,
+      "f1": 0.1624807790876473
+    }
+  ],
+  "platform_counts": {
+    "total_predictions": 203769,
+    "label_counts": {
+      "unknown": 157205,
+      "licit": 42019,
+      "illicit": 4545
+    },
+    "priority_counts": {
+      "low": 163015,
+      "medium": 30565,
+      "high": 8151,
+      "critical": 2038
+    },
+    "score_min": 5.571973247242568e-07,
+    "score_max": 0.9999552965164185,
+    "score_mean": 0.13999870419502258
+  },
+  "temporal_test_metrics": {
+    "total": 6687,
+    "tp": 4,
+    "tn": 6382,
+    "fp": 136,
+    "fn": 165,
+    "accuracy": 0.9549872887692538,
+    "precision": 0.02857142857142857,
+    "recall": 0.023668639053254437,
+    "f1": 0.02588996763754045
+  },
+  "test_recall_at_k": {
+    "50": 0.023668639053254437,
+    "100": 0.023668639053254437,
+    "200": 0.04142011834319527,
+    "500": 0.11242603550295859,
+    "1000": 0.21893491124260356,
+    "2000": 0.5739644970414202,
+    "5000": 1.0
+  },
+  "error_analysis_counts": {
+    "tp_illicit_detected": 4257,
+    "tn_licit_correct": 41688,
+    "fp_licit_alerted": 331,
+    "fn_illicit_missed": 288
+  },
+  "explainability": {
+    "top_10_shap_features": [
+      "f_52",
+      "f_58",
+      "f_124",
+      "f_89",
+      "f_2",
+      "f_160",
+      "f_45",
+      "f_131",
+      "f_15",
+      "f_57"
+    ],
+    "top_10_model_importance_features": [
+      "f_52",
+      "f_89",
+      "f_40",
+      "f_162",
+      "f_39",
+      "f_45",
+      "f_102",
+      "f_58",
+      "f_99",
+      "f_131"
+    ],
+    "shap_sample": {
+      "split": "test",
+      "sample_size": 2000,
+      "source": "/home/lucho/aml-gnn-tesis/data/interim/elliptic/nodes_with_graph_features.parquet"
+    }
+  },
+  "technical_integrity": {
+    "overall_status": "passed"
+  },
+  "main_interpretation": "El prototipo queda técnicamente preparado como plataforma analítica AML. XGBoost funciona como motor predictivo principal, mientras que grafos, subgrafos, validación temporal, análisis de errores, vecindario transaccional y SHAP complementan la interpretación del riesgo.",
+  "main_limitations": [
+    "Los nodos unknown no tienen etiqueta confirmada.",
+    "El módulo de inferencia completa requiere las 168 features del entrenamiento.",
+    "La plataforma no reconstruye automáticamente nuevas features blockchain externas.",
+    "El score debe interpretarse como apoyo a priorización, no como decisión automática definitiva.",
+    "Las features originales del dataset Elliptic están anonimizadas, por lo que su interpretación semántica directa es limitada."
+  ],
+  "recommended_next_step": "Pasar a redacción formal de metodología, resultados, discusión, limitaciones y trabajos futuros.",
+  "outputs": {
+    "final_thesis_key_results": "/home/lucho/aml-gnn-tesis/reports/tables/final_thesis_key_results.csv",
+    "final_thesis_analysis_summary": "/home/lucho/aml-gnn-tesis/reports/metrics/final_thesis_analysis_summary.json"
+  }
+}

@@ -1,0 +1,30 @@
+section,metric,value,interpretation
+Modelo principal,Modelo seleccionado,XGBoost baseline,Modelo usado como motor predictivo principal del prototipo.
+Modelo principal,PR-AUC test,0.561439,Métrica principal usada por el desbalance de clases.
+Modelo principal,ROC-AUC test,0.873378,Capacidad general de separación entre clases.
+Modelo principal,Precision test,0.536585,Proporción de alertas positivas que realmente fueron ilícitas.
+Modelo principal,Recall test,0.485294,Proporción de ilícitas detectadas por el modelo.
+Modelo principal,F1 test,0.509653,Balance entre precision y recall.
+Comparación de modelos,Mejor modelo por PR-AUC,XGBoost baseline,El ranking confirma el modelo principal seleccionado.
+Comparación de modelos,Cantidad de modelos comparados,11,"Incluye baselines, GNN y modelos con subgrafos."
+Predicciones de plataforma,Total de predicciones,203769,Cantidad total de nodos con score generado.
+Predicciones de plataforma,Nodos illicit,4545,Transacciones con etiqueta ilícita conocida.
+Predicciones de plataforma,Nodos licit,42019,Transacciones con etiqueta lícita conocida.
+Predicciones de plataforma,Nodos unknown,157205,Transacciones sin etiqueta confirmada.
+Predicciones de plataforma,Alertas critical,2038,Transacciones ubicadas en el percentil más alto de riesgo.
+Predicciones de plataforma,Alertas high,8151,Transacciones de prioridad alta.
+Validación temporal,Total test,6687,Cantidad de nodos etiquetados evaluados en test.
+Validación temporal,Precision test temporal,0.028571,Precision calculada respetando el split temporal original.
+Validación temporal,Recall test temporal,0.023669,Recall calculado sobre datos futuros del split test.
+Validación temporal,F1 test temporal,0.02589,F1 calculado sobre el split test.
+Validación temporal,Recall@50 test,0.023669,Proporción de ilícitos recuperados en las primeras K alertas.
+Validación temporal,Recall@100 test,0.023669,Proporción de ilícitos recuperados en las primeras K alertas.
+Validación temporal,Recall@500 test,0.112426,Proporción de ilícitos recuperados en las primeras K alertas.
+Validación temporal,Recall@1000 test,0.218935,Proporción de ilícitos recuperados en las primeras K alertas.
+Análisis de errores,TP illicit detected,4257,Ilícitas detectadas correctamente en análisis global supervisado.
+Análisis de errores,FP licit alerted,331,Lícitas marcadas como riesgo.
+Análisis de errores,FN illicit missed,288,Ilícitas no detectadas.
+Explicabilidad XGBoost,Muestra SHAP,2000,Cantidad de registros del split test usados para SHAP.
+Explicabilidad XGBoost,Top 10 SHAP,"f_52, f_58, f_124, f_89, f_2, f_160, f_45, f_131, f_15, f_57",Variables con mayor contribución promedio al score.
+Explicabilidad XGBoost,Top 10 importancia interna,"f_52, f_89, f_40, f_162, f_39, f_45, f_102, f_58, f_99, f_131",Variables más importantes según la importancia interna del modelo.
+Integridad técnica,Estado general,passed,Resultado del script de validación técnica del prototipo.

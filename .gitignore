@@ -86,6 +86,7 @@ reports/tables/*
 !reports/tables/xgb_model_feature_importance.csv
 !reports/tables/xgb_shap_global_importance.csv
 !reports/tables/xgb_local_explanations_top_alerts.csv
+!reports/tables/final_thesis_key_results.csv
 
 # Métricas: ignorar todas salvo las necesarias para trazabilidad/dashboard
 reports/metrics/*
@@ -102,6 +103,7 @@ reports/metrics/*
 !reports/metrics/inference_schema_xgboost.json
 !reports/metrics/platform_integrity_report.json
 !reports/metrics/xgb_explainability_summary.json
+!reports/metrics/final_thesis_analysis_summary.json
 
 # ============================================================
 # Experimentos pesados
